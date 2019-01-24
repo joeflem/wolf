@@ -1,7 +1,5 @@
 #  🐺 Wolf
-Wolf is a beautiful notes template for WordPress. It’s really simple, with it’s main function being taking your WordPress posts and categories, and displaying them in a simple, fast, easy to read format.
-
-Wolf was created to serve a very simple purpose: to be open in a tab, providing quick access to all notes (posts), from anywhere, on any device.
+Wolf is a beautiful notes template for WordPress. It’s really simple, with its main function being taking your WordPress posts and categories, and displaying them in a simple, note-style format.
 
 ## 🔌 Demo
  [See the live demo](https://wolf.ciavuc.co/)
