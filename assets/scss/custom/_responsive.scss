@@ -1,0 +1,81 @@
+// Changes current note / content width to 100% width so it doesn't overflow
+@media only screen and (max-width: 1280px){
+  .content{
+    width: 100%;
+  }
+}
+
+// Kick into mobile / tablet mode
+@media only screen and (max-width: 1050px){
+  .posts.desktop{
+    display: none;
+  }
+  .posts.mobile{
+    display: block;
+    min-width: 0;
+  }
+  .view-controller{
+    display: none;
+  }
+  nav ul li:before{
+    display: none !important;
+  }
+  .menu-item-has-children > a {
+    padding: 8px 8px 8px 33px;
+  }
+  nav ul li a{
+    padding: 8px;
+  }
+  body{
+    width: 100vw;
+    @include transition(0.5s ease);
+  }
+  body.is-nav{
+    width: 100vw;
+    .toggle-nav{
+      left: 67vw;
+    }
+    .posts{
+      min-width: 65vw;
+      width: 65vw;
+      left: 0;
+    }
+    section.container{
+      //width: 35vw;
+      right: 0;
+      min-width: 100vw;
+
+    }
+  }
+  nav{
+    display: none;
+  }
+  .posts{
+    width: 0;
+    left: -100%;
+  }
+  section.container{
+    width: 100vw;
+  }
+  .toggle-nav{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url('./assets/images/toggle-nav.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    opacity: 0.4;
+    cursor: pointer;
+    z-index: 99999;
+    @include transition(0.5s ease);
+  }
+}
+@media only screen and (max-width: 650px) {
+  section.container {
+    padding: 40px 15px;
+  }
+}

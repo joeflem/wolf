@@ -1,0 +1,71 @@
+.posts{
+  &.mobile{
+    display: none;
+  }
+  background-color: $dark;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  width: 260px;
+  height: 100vh;
+  z-index: 99999;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  padding-top: 50px;
+  font-size: 12px;
+  @include transition(0.5s ease);
+  .post{
+    color: $lightgrey;
+    position: relative;
+    transition: 0.25s ease;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: auto;
+    &:hover, &.active{
+      background-color: darken($grey, 0.25%);
+    }
+    a.fillLink{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999999;
+    }
+
+    time{
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .post-body{
+      padding: 20px 10px 20px 70px;
+      position: relative;
+      &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 74%;
+        height: 1px;
+        background-color: #000;
+        right: 0;
+      }
+    }
+    .post-title{
+      font-size: 14px;
+      font-weight: 500;
+      color: #ADC0C8;
+      margin: 0;
+    }
+    .post-categories{
+      a{
+        color: $lightgrey;
+      }
+    }
+
+  }
+}

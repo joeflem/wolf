@@ -1,0 +1,28 @@
+/*
+Theme Name: Wolf Notes
+Theme URI: https://wolf.ciavuc.co
+Author: Joe Ciavucco
+Author URI: https://ciavuc.co
+Description: A beautifully simple, responsive and easy to use notes template.
+Version: 0.6.1
+License: GNU General Public License v3.0
+License URI: https://github.com/ciavuc/wolf/blob/master/LICENSE
+Text Domain: wolf
+*/
+
+@import 'https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css';
+@import 'custom/variables';
+@import 'custom/mixins';
+@import 'custom/navigation';
+@import 'custom/general';
+@import 'custom/login';
+@import 'custom/posts';
+@import 'custom/search';
+@import 'custom/code';
+@import 'custom/tooltips';
+@import 'custom/controls';
+@import 'prism.css';
+@import 'custom/responsive';
+
+
+

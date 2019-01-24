@@ -1,0 +1,78 @@
+// view controller
+.view-controller{
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  .toggle-options{
+    color: #6F7373;
+    font-size: 22px;
+    opacity: 0.8;
+    cursor: pointer;
+    @include transition(0.25s ease);
+    &:hover{
+      opacity: 0.85;
+      color: #FFF;
+    }
+  }
+  &.is-active{
+    .views{
+      @include translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  // views
+  .views{
+    display: flex;
+    position: absolute;
+    bottom: 105%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #323337;
+    border: 1px solid #7a7e7e;
+    padding: 5px 5px 10px 5px;
+    @include border-radius(5px);
+    @include translateY(5px);
+    @include transition(0.5s ease);
+    .view{
+      flex: 1;
+      width: 38px;
+      height: 38px;
+      background-size: contain;
+      @include transition(0.25s ease);
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+      cursor: pointer;
+      position: relative;
+      &:hover, &.is-active{
+        opacity: 1;
+      }
+      &.is-active{
+        &:before{
+          content: "";
+          width: 5px;
+          height: 5px;
+          @include border-radius(20px);
+          background-color: $primary;
+          position: absolute;
+          bottom: -5px;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+        }
+      }
+      &.single-col{
+        background-image: url('./assets/images/views/single-col.svg');
+      }
+      &.two-col{
+        background-image: url('./assets/images/views/two-col.svg');
+      }
+      &.three-col{
+        background-image: url('./assets/images/views/three-col.svg');
+      }
+    }
+  }
+}

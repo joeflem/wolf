@@ -1,0 +1,118 @@
+.tooltip{
+  //Tooltip Location
+  &.tt-left{
+    right:  106%;
+    @include vertical-center;
+    &:before{
+      top: 25%;
+      right: -10px;
+      left: initial;
+      margin: 0 auto;
+      @include rotate(90deg);
+    }
+  }
+  &.tt-right{
+    left: 106%;
+    @include vertical-center;
+    &:before{
+      top: 25%;
+      left: -10px;
+      right: initial;
+      margin: 0 auto;
+      @include rotate(-90deg);
+    }
+  }
+  &.tt-bottom{
+    top: 105%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    &:before{
+      top: -22px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+  }
+  &.tt-bottom-right{
+    top: 105%;
+    left: 0;
+    margin: 0 auto;
+    &:before{
+      top: -22px;
+      left: 6px;
+    }
+  }
+  &.tt-bottom-left{
+    top: 105%;
+    right: 0;
+    margin: 0 auto;
+    &:before{
+      top: -22px;
+      right: 6px;
+    }
+  }
+  &.tt-top{
+    bottom: 105%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  &:before{
+    position: absolute;
+    font-size: 41px;
+    color: $primary;
+    content: "\f286";
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  // Tooltip Location end
+  padding: 8px;
+  display: block;
+  position: absolute;
+  height: auto;
+  width: 150px;
+  @include border-radius(5px);
+  font-size: 12px;
+  line-height: 16px;
+  z-index: 999999;
+  background-color: $primary;
+  color: #FFF;
+  @include transition(0.6s ease);
+  opacity: 0;
+  visibility: hidden;
+  em{
+    padding: 2px 5px  !important;
+    display: inline-block;
+    font-size: 9px;
+    margin: 0 !important;
+    font-style: initial;
+    font-family: monospace, monospace;
+    background-color: rgba(255,255,255,0.3);
+    @include border-radius(4px);
+  }
+  b{
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  p{
+    margin: 0;
+    line-height: 15px;
+  }
+}
+
+.edit-posts-container:hover{
+  .tooltip{
+    visibility: visible;
+    opacity: 1;
+  }
+}

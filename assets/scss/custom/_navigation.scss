@@ -1,0 +1,144 @@
+.nav-link{
+  margin-right: 10px;
+}
+nav{
+  background-color: $grey;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  font-size: 12px;
+  @include transition(0.5s ease);
+  .new-post{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #FFF;
+    font-size: 21px;
+    opacity: 1;
+    padding: 5px 8px;
+    line-height: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    @include transition(0.25s);
+    &:hover{
+      background-color: #202426;
+      border-color: #7a7e7e;
+      .tooltip{
+        visibility: visible;
+        opacity: 1;
+      }
+      &:after{
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:after{
+      @include transition(0.5s ease);
+      content: "Add a new note";
+      position: absolute;
+      top: 65%;
+      right: 105%;
+      width: 90px;
+      color: #7a7e7e;
+      font-size: 12px;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  .nav-brand{
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 20px;
+  }
+  ul{
+    list-style: none;
+    padding: 50px 0 0 0;
+    margin: 0;
+    li{
+      width: 100%;
+      position: relative;
+      &:before{
+        position: absolute;
+        left: 23px;
+        top: 8px;
+        margin-left: 10px;
+        color: $lightgrey;
+        font-size: 16px;
+        width: 18px;
+        text-align: center;
+      }
+      &.menu-item-has-children{
+        &:after{
+          content: "\f3d0";
+          position: absolute;
+          left: 0px;
+          top: 8px;
+          margin-left: 10px;
+          color: $lightgrey;
+          font-size: 16px;
+          width: 18px;
+          text-align: center;
+          display: inline-block;
+          font-family: "Ionicons";
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          text-rendering: auto;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+      a{
+        width: 100%;
+        color: $lightgrey;
+        font-size: 14px;
+        padding: 8px 15px 8px 60px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        text-decoration: none !important;
+        &:hover{
+          color: lighten($lightgrey, 1%);
+        }
+        &.active{
+          background-color: $primary;
+          color: #FFF;
+        }
+      }
+      &.current-menu-ancestor, &.current-menu-item, &.current-post-ancestor, &.is-open{
+        background-color: #202426;
+        .sub-menu{
+          display: block;
+          width: 100%;
+          padding-left: 20px;
+        }
+      }
+      .sub-menu{
+        background: $grey;
+        display: none;
+        padding-top: 0;
+      }
+      .sub-menu.is-active{
+        display: block;
+        width: 100%;
+        padding-left: 20px;
+      }
+    }
+  }
+  div > ul > li.current-menu-item{
+    background-color: #202426;
+  }
+}
