@@ -9,9 +9,9 @@ if (!is_page('login')) {
 
 get_template_part('components/header/head'); ?>
 <body>
-<span class="toggle-nav"></span>
 <?php if (!is_page('login')) {
     ?>
+    <span class="toggle-nav"></span>
     <nav>
         <a href="/wp-admin/post-new.php" class="new-post ion-ios-add-circle-outline">
             <?php get_template_part('components/tooltips/new-post'); ?>
