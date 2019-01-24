@@ -1,4 +1,5 @@
 jQuery(document).ready(function ($) {
+    $('input').iCheck();
 
     $('nav ul li.menu-item-has-children a').click(function (event) {
         if ($(this).closest("li.menu-item").children("ul.sub-menu").length > 0) {
