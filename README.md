@@ -13,5 +13,4 @@ Wolf was created to serve a very simple purpose: to be open in a tab, providing 
 ## Installing
 **You’ll need:**
 * A WordPress website
-* A place to host your WordPress website
 * [Markdown Editor plugin](https://wordpress.org/plugins/markdown-editor/) by SEO Themes (if you want to add Markdown to your posts)
