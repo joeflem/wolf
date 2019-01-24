@@ -7,9 +7,9 @@ Description: A beautifully simple, responsive and easy to use notes template.
 Version: 0.6.1
 License: GNU General Public License v3.0
 License URI: https://github.com/ciavuc/wolf/blob/master/LICENSE
-Text Domain: wolf
+Text Domain: wolfnotes
 */
-@import 'https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css';
+@import "https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css";
 @import url(prism.css);
 .nav-link {
   margin-right: 10px; }
@@ -699,21 +699,26 @@ pre {
 @media only screen and (max-width: 1280px) {
   .content {
     width: 100%; } }
-
 @media only screen and (max-width: 1050px) {
   .posts.desktop {
     display: none; }
+
   .posts.mobile {
     display: block;
     min-width: 0; }
+
   .view-controller {
     display: none; }
+
   nav ul li:before {
     display: none !important; }
+
   .menu-item-has-children > a {
     padding: 8px 8px 8px 33px; }
+
   nav ul li a {
     padding: 8px; }
+
   body {
     width: 100vw;
     -webkit-transition: 0.5s ease;
@@ -721,6 +726,7 @@ pre {
     -ms-transition: 0.5s ease;
     -o-transition: 0.5s ease;
     transition: 0.5s ease; }
+
   body.is-nav {
     width: 100vw; }
     body.is-nav .toggle-nav {
@@ -732,13 +738,17 @@ pre {
     body.is-nav section.container {
       right: 0;
       min-width: 100vw; }
+
   nav {
     display: none; }
+
   .posts {
     width: 0;
     left: -100%; }
+
   section.container {
     width: 100vw; }
+
   .toggle-nav {
     display: block;
     width: 32px;
@@ -758,7 +768,8 @@ pre {
     -ms-transition: 0.5s ease;
     -o-transition: 0.5s ease;
     transition: 0.5s ease; } }
-
 @media only screen and (max-width: 650px) {
   section.container {
     padding: 40px 15px; } }
+
+/*# sourceMappingURL=style.css.map */
