@@ -5,12 +5,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .ion-ios-paw{
+  .logo{
     display: block;
     font-size: 35px;
     text-align: center;
     margin: 0 auto 20px auto;
-    opacity: 0.4;
+    opacity: 0.6;
+    background-image: url('./assets/images/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 56px;
+
   }
   &:before{
     content: "";
@@ -39,6 +45,13 @@
       box-shadow: none !important;
       font-size: 12px;
       padding: 8px;
+      -webkit-appearance: none;
+      &#wp-submit{
+        background-color: $primary !important;
+        color: #FFF !important;
+        border-color: transparent !important;
+      }
     }
+
   }
 }
