@@ -1,5 +1,9 @@
 jQuery(document).ready(function ($) {
-    $('input').iCheck();
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
+        increaseArea: '20%' // optional
+    });
 
     $('nav ul li.menu-item-has-children a').click(function (event) {
         if ($(this).closest("li.menu-item").children("ul.sub-menu").length > 0) {
